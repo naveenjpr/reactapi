@@ -1,13 +1,67 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+import reportWebVitals from "./reportWebVitals";
+import Home from "./pages/Home";
+import Product from "./pages/product";
+import Carts from "./pages/carts";
+import Users from "./pages/users";
+import Posts from "./pages/posts";
+import Comments from "./pages/comments";
+import Quotes from "./pages/quotes";
+import Recipes from "./pages/recipes";
+import Todos from "./pages/todos";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import ProductDetails from "./pages/productDetails";
+
+let routh = createBrowserRouter([
+  {
+    path: "/",
+    element: <Home />,
+  },
+  {
+    path: "product",
+    element: <Product />,
+  },
+  {
+    path: "productDetails/:id",
+    element: <ProductDetails />,
+  },
+  {
+    path: "Users",
+    element: <Users />,
+  },
+  {
+    path: "posts",
+    element: <Posts />,
+  },
+  {
+    path: "Comments",
+    element: <Comments />,
+  },
+  {
+    path: "Quotes",
+    element: <Quotes />,
+  },
+  {
+    path: "Recipes",
+    element: <Recipes />,
+  },
+  {
+    path: "Todos",
+    element: <Todos />,
+  },
+  {
+    path: "Carts",
+    element: <Carts />,
+  },
+]);
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={routh} />
   </React.StrictMode>
 );
 
