@@ -18,7 +18,7 @@ import ProductDetails from "./pages/productDetails";
 let routh = createBrowserRouter([
   {
     path: "/",
-    element: <Home />,
+    element: <Users />,
   },
   {
     path: "product",
