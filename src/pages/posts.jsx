@@ -39,7 +39,7 @@ export default function Posts() {
                     </div>
                     <div className="mb-2">
                       <span className="font-bold text-lg">Body:</span>
-                      <p className="ml-2 text-red-900">{v.body}</p>
+                      <p className="ml-2 text-red-900 overflow-auto max-h-[100px]">{v.body}</p>
                     </div>
                     <div className="mb-2">
                       <span className="font-bold text-lg">User ID:</span>
@@ -51,10 +51,10 @@ export default function Posts() {
                       <span className="ml-2 text-green-400">{v.tags[1]}</span>
                       <span className="ml-2 text-blue-400">{v.tags[2]}</span>
                     </div>
-                    <div className="mb-2">
+                    {/* <div className="mb-2">
                       <span className="font-bold text-lg">Reactions:</span>
                       <span className="ml-2">{v.reactions}</span>
-                    </div>
+                    </div> */}
                   </div>
                 );
               })
